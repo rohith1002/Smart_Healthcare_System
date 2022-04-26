@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Brain Disease Detection</title>
+    <style>
+        .formstyle{
+            border-radius: 10px;
+    border: 1px solid grey;
+    padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;; 
+        }
+       .formstyle:focus{
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+  outline:none;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Healthcare System</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900" href="/heart">Heart Disease</a>
+            <a class="mr-5 hover:text-gray-900" href="/diabetes">Diabetes</a>
+            <a class="mr-5 hover:text-gray-900" href="/liver">Liver </a>
+            <a class="mr-5 hover:text-gray-900" href="/ct">CT Scan</a>
+            <a class="mr-5 hover:text-gray-900" href="/malaria">Malaria</a>
+            <a class="mr-5 hover:text-gray-900" href="/mri">MRI Scan</a>
+          </nav>
+          <button onclick="location.href = '/';" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Home
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+      <img alt="feature" class="object-cover object-center h-full w-full" src="https://images.unsplash.com/photo-1581595220057-eefa8c4add1b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218MHx8bXJpIGJyYWlufHx8fHx8MTYzOTg4MzkzNg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=460">
+    </div>
+    <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+        <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Predict Brain Disease</h2>
+        <p class="leading-relaxed mb-5 text-gray-600">Upload MRI Scan</p>
+        <form action="/mripredict" method="POST" enctype="multipart/form-data">
+        
+          <input type="file" id="mriscan" name="mriscan" >
+
+          
+          <br>
+          <br>
+        <input type="submit" class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" value="Submit">
+        <!-- <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="reset">Reset</button> -->
+        <br><br>
+        <h2 class="text-gray-900 text-lg mb-1 font-medium title-font" style="color:red;">{{pred}}</h2>
+
+        <p class="text-xs text-gray-500 mt-3"></p>
+      </div>
+    </div>
+  </div>
+  </form>
+</section>
+</body>
+</html>
