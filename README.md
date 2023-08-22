@@ -1,7 +1,9 @@
 # Smart Healthcare System: Disease Detection Website
 
 ![Smart Healthcare System](https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_22427_16510745099487305.jpg)
-website : https://smart-healthcare-system.onrender.com/
+# Website : https://smart-healthcare-system.onrender.com/
+
+
 Welcome to the Smart Healthcare System's Disease Detection Website GitHub repository! This repository hosts the source code and related resources for our platform, which is designed to assist users in detecting diseases using machine learning and deep learning .
 
 ## Features
