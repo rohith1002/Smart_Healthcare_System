@@ -11,7 +11,7 @@ Welcome to the Smart Healthcare System's Disease Detection Website GitHub reposi
 - Disease Detection: Utilizes deep learning and machine learning models to analyze user-provided data for disease suggestions.
 - User-Friendly Interface: Intuitive UI for seamless user interaction and data input.
 - Used Generative AI using grad cam
-![Gradcam][https://github.com/rohith1002/Smart_Healthcare_System/blob/main/download.jpg]
+![Gradcam](https://github.com/rohith1002/Smart_Healthcare_System/blob/main/download.jpg).
 
 ## Getting Started
 
